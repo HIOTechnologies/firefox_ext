@@ -1,0 +1,39 @@
+{
+ "author": "HIO Technologies Inc.",
+   "background": {
+      "scripts": [ "jquery-3.3.1.min.js","background.js"    ]
+	  
+   },
+   "browser_action": {
+      "default_icon": {
+         "32": "./icons/icon-32.png"
+      },
+      "default_popup": "main.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": ["jquery-3.3.1.min.js", "main.js"  ],
+      "matches": [ "<all_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self'; object-src 'self'",
+   "description": "HIO Technology.",
+   "icons": {
+      "128": "icons/icon-128.png",
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png"
+   },
+   "manifest_version": 2,
+   "name": "HIO Technologies",
+   "permissions": [ "nativeMessaging", "webNavigation","contextMenus", "activeTab", "tabs", "notifications", "*://*/*" ],
+   "version": "0.0.83",
+  "applications": {
+    "gecko": {
+      "id": "hioff@gethio.com",
+      "strict_min_version": "50.0"
+    }
+  }
+
+  
+}
